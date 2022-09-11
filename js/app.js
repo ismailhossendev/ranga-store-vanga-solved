@@ -59,9 +59,9 @@ const showProductDetails = (product_id) => {
 
 const showProductDetailsInModal = (product_details) => {
    console.log(product_details);
-   setInnerText('exampleModalLabel', product_details.title);
-   setInnerText('product_id', product_details.id);
-   setInnerText('modal_body', product_details.description);
+   setInnerTextmodal('modal-title', product_details.title);
+   setInnerText('productId', product_details.id);
+   setInnerTextmodal('modal-body', product_details.description);
    setInnerText('rating', product_details.rating.rate);
 };
 
@@ -83,6 +83,9 @@ const updatePrice = (id, value) => {
 const setInnerText = (id, value) => {
    document.getElementById(id).innerText = Math.round(value);
 };
+const setInnerTextmodal = (id, value) => {
+   document.getElementById(id).innerText = value;
+}
 
 // update delivery charge and total Tax
 const updateTaxAndCharge = () => {
